@@ -1,0 +1,76 @@
+.dashboard {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.dashboard h1 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.dashboard-description {
+  color: var(--light-text);
+  margin-bottom: 2rem;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.75rem;
+}
+
+.widget {
+  background-color: var(--card-bg);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-sm);
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.widget:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.widget-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.widget-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.widget-content {
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.large-widget {
+  grid-column: span 2;
+}
+
+
+
+.dark-mode .dashboard{
+  background-color: rgb(56, 55, 55);
+}
+
+.dark-mode .dashboard-description{
+  color: white;
+}
+
+.dark-mode .dashboard h1{
+  color: white;
+}
